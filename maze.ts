@@ -27,8 +27,7 @@ const outOfMazeRange = (value: number): boolean => {
 
 const mazeEl = document.getElementsByClassName('maze')[0] as HTMLElement;
 
-// было так, в  функции этой строчки не было
-// const player = document.getElementsByClassName('player')[0] as HTMLElement;
+const player = document.getElementById('player') as HTMLElement;
 
 const winPosX = 7;
 const winPosY = 8;
@@ -101,8 +100,6 @@ function checkIfCanMove(dir: MoveDirection): boolean {
 }
 
 function updatePlayerPosition(): void {
-
-    const player = document.getElementsByClassName('player')[0] as HTMLElement;
     player.style.transform = `translate(${playerPosX}em, ${playerPosY}em)`;
 
     if (playerPosX === winPosX && playerPosY === winPosY) {

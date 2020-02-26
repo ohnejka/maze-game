@@ -23,6 +23,7 @@ var outOfMazeRange = function (value) {
     return value < 0 || value > 8;
 };
 var mazeEl = document.getElementsByClassName('maze')[0];
+var player = document.getElementById('player');
 var winPosX = 7;
 var winPosY = 8;
 var playerPosX = 0;
@@ -67,7 +68,6 @@ function checkIfCanMove(dir) {
     return allowed;
 }
 function updatePlayerPosition() {
-    var player = document.getElementsByClassName('player')[0];
     player.style.transform = "translate(" + playerPosX + "em, " + playerPosY + "em)";
     if (playerPosX === winPosX && playerPosY === winPosY) {
         console.log("you win!");
