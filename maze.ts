@@ -27,7 +27,13 @@ const outOfMazeRange = (value: number): boolean => {
 
 const mazeEl = document.getElementsByClassName('maze')[0] as HTMLElement;
 
+const startX = mazeEl.getBoundingClientRect().x;
+const startY = mazeEl.getBoundingClientRect().y;
+
 const player = document.getElementById('player') as HTMLElement;
+
+player.style.top = `${startY}px`;
+player.style.left = `${startX}px`;
 
 const winPosX = 7;
 const winPosY = 8;

@@ -23,7 +23,11 @@ var outOfMazeRange = function (value) {
     return value < 0 || value > 8;
 };
 var mazeEl = document.getElementsByClassName('maze')[0];
+var startX = mazeEl.getBoundingClientRect().x;
+var startY = mazeEl.getBoundingClientRect().y;
 var player = document.getElementById('player');
+player.style.top = startY + "px";
+player.style.left = startX + "px";
 var winPosX = 7;
 var winPosY = 8;
 var playerPosX = 0;
