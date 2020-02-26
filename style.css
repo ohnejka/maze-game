@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: monospace;
+    font-size: 20px;
+
+    color: black;
+    background-color: lightgray;
+
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -3em;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0;
+}
+
+.maze {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    background-color: palevioletred;
+}
+
+.pic-row {
+    height: 1em;
+}
+
+
+.el {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+.wall {
+    background-color: purple;
+}
+
+.player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    transition: transform 0.05s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.pic-row:last-child .el:nth-last-child(2) {
+    background-color: purple;
+    opacity:0.3;
+}
