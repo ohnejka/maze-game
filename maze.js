@@ -90,7 +90,7 @@ for (var row = 0; row < rowCount; row++) {
     mazeEl.innerHTML += "<div class=\"pic-row\">" + buffer + "</div>";
 }
 ;
-document.addEventListener('keyup', function (event) {
+document.addEventListener('keydown', function (event) {
     var canMove = false;
     switch (event.key) {
         case 'ArrowDown':

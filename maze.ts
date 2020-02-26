@@ -134,7 +134,7 @@ for (let row = 0; row < rowCount; row++) {
 };
 
 
-document.addEventListener('keyup', (event: KeyboardEvent) => {
+document.addEventListener('keydown', (event: KeyboardEvent) => {
 
     let canMove = false;
 
